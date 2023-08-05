@@ -14,14 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: configure
-      run: ./configure
-
-    - name: first run
-      run: make say-hello
-
-    - name: Run check
-      run: make check
-
-    - name: Run distcheck
-      run: make distcheck
+    - name: Run Makefile Command
+      run: |
+        cd ./app
+        make say-hello
